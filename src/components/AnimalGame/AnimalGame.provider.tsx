@@ -1,20 +1,11 @@
 import {createContext, FC, PropsWithChildren, useCallback, useEffect, useMemo, useRef, useState} from "react";
 
-
-interface IAnimalGameContextState {
-
-}
-
 interface IAnimalGameContextProps extends PropsWithChildren {
     onDragEnd?: (dragElem: Element, position: IPoint, offset: IPoint, avatar: Element, dropElem: Element) => void;
     onDragCancel?: (dragElem: Element, position: IPoint, offset: IPoint, avatar: Element) => void;
 }
 
-const DEFAULT_ANIMAL_GAME_CONTEXT_STATE: IAnimalGameContextState = {
-
-}
-
-const AnimalGameContext = createContext<IAnimalGameContextState>(DEFAULT_ANIMAL_GAME_CONTEXT_STATE)
+const AnimalGameContext = createContext({})
 
 export interface IPoint {
     x: number;
@@ -159,11 +150,7 @@ export const AnimalGameProvider: FC<IAnimalGameContextProps> = ({children, onDra
         }
     }, [onMouseMove, onMouseUp, onMouseDown])
 
-    const value = useMemo(() => ({
-
-    }), [])
-
-    return <AnimalGameContext.Provider value={value}>
+    return <AnimalGameContext.Provider value={{}}>
         {children}
     </AnimalGameContext.Provider>
 }
