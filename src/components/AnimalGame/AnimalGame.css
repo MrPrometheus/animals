@@ -1,0 +1,25 @@
+.droppable {
+    height: 200px;
+    width: 200px;
+}
+
+.draggable {
+    position: absolute;
+}
+
+.forest {
+    background-color: lightgreen;
+}
+
+.ocean {
+    background-color: lightblue;
+}
+
+.hils {
+    background-color: lightgray;
+}
+
+.icon {
+    width: 64px;
+    height: 64px;
+}
